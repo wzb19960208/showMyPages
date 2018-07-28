@@ -45,6 +45,6 @@ app.all('/*', function(req, res){
 });
 
 
-var server = app.listen(8080,'localhost',()=>{
+var server = app.listen(8080,'0.0.0.0',()=>{
     console.log('项目跑起来了！');
 });
