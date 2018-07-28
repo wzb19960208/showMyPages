@@ -5,6 +5,8 @@ const path = require('path');
 
 var app = express();
 
+
+
 //app.use(express.static(path.join(__dirname, './static')));
 
 app.all('/*', function(req, res){
@@ -43,4 +45,6 @@ app.all('/*', function(req, res){
 });
 
 
-var server = app.listen(8080,'localhost');
+var server = app.listen(8080,'localhost',()=>{
+    console.log('项目跑起来了！');
+});
