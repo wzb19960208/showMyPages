@@ -8,7 +8,7 @@ var app = express();
 //app.use(express.static(path.join(__dirname, './static')));
 
 app.all('/*', function(req, res){
-    //console.log("请求路径："+req.url);
+    console.log("请求路径："+req.url);
 
     if(req.url=='/mukewang/'){
         fs.createReadStream('./mukewang/index.html').pipe(res);
@@ -43,4 +43,4 @@ app.all('/*', function(req, res){
 });
 
 
-var server = app.listen(8080,'www.weizhibin.cn');
+var server = app.listen(8080,'localhost');
