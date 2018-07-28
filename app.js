@@ -12,7 +12,7 @@ var app = express();
 app.all('/*', function(req, res){
     console.log("请求路径："+req.url);
 
-    if(req.url=='/mukewang/'){
+    if(req.url=='/mukewang'){
         fs.createReadStream('./mukewang/index.html').pipe(res);
     }
 
